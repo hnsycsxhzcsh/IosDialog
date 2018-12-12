@@ -38,4 +38,12 @@
         android:layout_marginTop="10dp"
         android:text="含有Edit的dislog" />
 
+    <Button
+        android:id="@+id/bt_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="含有Edit的dislog2" />
+
 </LinearLayout>

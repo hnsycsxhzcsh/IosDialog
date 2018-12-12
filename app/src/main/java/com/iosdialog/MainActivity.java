@@ -6,13 +6,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.dialog.EditDialog;
 import com.dialog.EditQuantityDialog;
 import com.dialog.EnsureDialog;
 import com.dialog.LoadingDialog;
 import com.dialog.SingleEnsureDialog;
+import com.dialog.constant.DialogConstant;
 import com.dialog.listener.IDialogEnsureClickListener;
 import com.dialog.listener.IEditQuantityClickListener;
 import com.dialog.listener.ISingleDialogEnsureClickListener;
+
+import java.math.BigDecimal;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         Button mBtEnsure = findViewById(R.id.bt_ensure);
         Button mBtSingleEnsure = findViewById(R.id.bt_single_ensure);
         Button mBtLoading = findViewById(R.id.bt_loading);
-        Button mBtEdit = findViewById(R.id.bt_edit_quantity);
+        Button mBtEditQuantity = findViewById(R.id.bt_edit_quantity);
+        Button mBtEdit = findViewById(R.id.bt_edit);
 
         mBtEnsure.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mBtEdit.setOnClickListener(new View.OnClickListener() {
+        mBtEditQuantity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final EditQuantityDialog cartEditDialog = EditQuantityDialog.
@@ -104,6 +109,26 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "数据不能为空", Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        });
+
+        mBtEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditDialog editDialog = EditDialog.newInstance(new BigDecimal(11), new BigDecimal(100), DialogConstant.NUMBER);
+                editDialog.show(getSupportFragmentManager(), "ensure");
+                editDialog.setOnClickListener(new IEditQuantityClickListener() {
+                    @Override
+                    public void onEnsureClick(String value) {
+                        Toast.makeText(MainActivity.this, "现在的值是" + value, Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelClick() {
+                        Toast.makeText(MainActivity.this, "点击了取消", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
             }
         });
 
