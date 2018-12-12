@@ -1,0 +1,5 @@
+<resources>
+    <!--1080*1920-->
+    <dimen name="shape_login_buttom_300px">150px</dimen>
+    <dimen name="shape_login_buttom_64px">32px</dimen>
+</resources>

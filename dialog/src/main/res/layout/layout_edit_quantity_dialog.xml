@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_fragment_circle_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/bt_quantity_minus"
+                android:layout_width="@dimen/edit_dialog_quantity_hei"
+                android:layout_height="@dimen/edit_dialog_quantity_hei"
+                android:background="@drawable/btn_quantity_minus" />
+
+            <EditText
+                android:id="@+id/et_cart_dialog"
+                android:layout_width="@dimen/edit_dialog_quantity_wid"
+                android:layout_height="@dimen/edit_dialog_quantity_hei"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_quantity"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/Black_333333" />
+
+            <Button
+                android:id="@+id/bt_quantity_plus"
+                android:layout_width="@dimen/edit_dialog_quantity_hei"
+                android:layout_height="@dimen/edit_dialog_quantity_hei"
+                android:background="@drawable/btn_quantity_plus" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_divide" />
+
+    <include layout="@layout/edit_quantity_dialog_bottom" />
+
+</LinearLayout>

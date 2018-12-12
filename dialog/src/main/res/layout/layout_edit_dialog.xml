@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_fragment_circle_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/et_cart_dialog"
+            android:layout_width="@dimen/edit_dialog_normal_wid"
+            android:layout_height="@dimen/edit_dialog_quantity_hei"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_cart_et_balance"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/view_divide" />
+
+    <include layout="@layout/edit_dialog_bottom" />
+
+</LinearLayout>

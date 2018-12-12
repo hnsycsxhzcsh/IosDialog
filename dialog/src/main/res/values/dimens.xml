@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="shape_login_buttom_300px">150px</dimen>
+    <dimen name="shape_login_buttom_64px">32px</dimen>
+    <dimen name="edit_dialog_quantity_wid">100dp</dimen>
+    <dimen name="edit_dialog_quantity_hei">40dp</dimen>
+    <dimen name="edit_dialog_normal_wid">150dp</dimen>
+
+
+</resources>

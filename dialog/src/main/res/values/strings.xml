@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">dialog</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_ok">OK</string>
+</resources>
