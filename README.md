@@ -4,8 +4,7 @@
 apk下载地址：https://github.com/hnsycsxhzcsh/IosDialog/blob/master/iosdialog.apk
 
 效果图
-
-#![image](https://github.com/hnsycsxhzcsh/IosDialog/blob/master/img/18tkr-gc4gb.gif)
+<img src="https://github.com/hnsycsxhzcsh/IosDialog/blob/master/img/18tkr-gc4gb.gif" width="300" height="612">
 
 
 一、项目的gradle可直接引用，方法为
