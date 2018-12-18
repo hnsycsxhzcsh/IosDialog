@@ -23,7 +23,7 @@ implementation "com.github.hnsycsxhzcsh:IosDialog:V1.1"
 
 二、实现方法，以EnsureDialog为例，其他dialog的实现请下载代码查看
 
-mBtEnsure.setOnClickListener(new View.OnClickListener() {
+     mBtEnsure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final EnsureDialog ensureDialog = new EnsureDialog();
