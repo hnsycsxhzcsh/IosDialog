@@ -1,7 +1,8 @@
 # IosDialog
 此项目是实现android应用dialog弹窗仿ios效果，如果有帮助到大家希望点下右上角Star，谢谢！
 
-apk下载地址：https://github.com/hnsycsxhzcsh/IosDialog/blob/master/iosdialog.apk
+<a href="https://github.com/hnsycsxhzcsh/IosDialog/blob/master/iosdialog.apk">Download Apk</a>
+
 
 效果图
 <img src="https://github.com/hnsycsxhzcsh/IosDialog/blob/master/img/18tkr-gc4gb.gif" width="300" height="612">
