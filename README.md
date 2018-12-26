@@ -1,5 +1,5 @@
 # IosDialog
-此项目是实现android应用dialog弹窗仿ios效果，如果有帮助到大家希望点下右上角Star，谢谢！
+此项目是实现android应用dialog弹窗仿ios效果。
 
 <a href="https://github.com/hnsycsxhzcsh/IosDialog/blob/master/iosdialog.apk">Download Apk</a>
 
@@ -52,3 +52,5 @@ implementation "com.github.hnsycsxhzcsh:IosDialog:V1.1"
 
 具体代码实现方式可以浏览我的博客地址：
 https://blog.csdn.net/m0_38074457/article/details/84979890
+
+如果有帮助到大家希望点下右上角Star，谢谢！
