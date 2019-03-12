@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.util.DisplayMetrics;
@@ -20,6 +21,7 @@ import android.view.WindowManager;
 public abstract class BaseDialogFragment extends DialogFragment {
     protected static final int SIZE_DEFAULT = -1;
     protected static final int SIZE_LOADING = 1;
+    protected static final int SIZE_FULL_WINDOW = 2; //全屏
 
     protected static final float COLOR_DEFAULT = 1.0f;
     protected static final float COLOR_TRANSPARENT = 0.0f;
@@ -35,6 +37,12 @@ public abstract class BaseDialogFragment extends DialogFragment {
         init(view);
         initDialog();
         return view;
+    }
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        return super.onCreateDialog(savedInstanceState);
     }
 
     public abstract int getLayoutId();
@@ -110,6 +118,13 @@ public abstract class BaseDialogFragment extends DialogFragment {
             if (size == SIZE_LOADING) {
 //                dialog.getWindow().setLayout((int) (dm.widthPixels * 0.5), (int) (dm.widthPixels * 0.5));
                 dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            } else if (size == SIZE_FULL_WINDOW) {
+                //全屏
+                Window window = dialog.getWindow();
+                WindowManager.LayoutParams lp = window.getAttributes();
+                lp.width = WindowManager.LayoutParams.MATCH_PARENT;   //设置宽度充满屏幕
+                lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+                window.setAttributes(lp);
             } else {
                 dialog.getWindow().setLayout((int) (dm.widthPixels * 0.8), ViewGroup.LayoutParams.WRAP_CONTENT);
             }
@@ -119,7 +134,6 @@ public abstract class BaseDialogFragment extends DialogFragment {
     protected void setOutsideColor(float color) {
         this.color = color;
     }
-
 
     //解决activity 和fragment onSaveInstanceState 后show报错问题,
     // 但是弹出dialog之后要点击两次返回键才推出，所以暂时不用此方法

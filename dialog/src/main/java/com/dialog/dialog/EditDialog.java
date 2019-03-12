@@ -1,4 +1,4 @@
-package com.dialog;
+package com.dialog.dialog;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.dialog.BaseDialogFragment;
+import com.dialog.R;
 import com.dialog.constant.DialogConstant;
 import com.dialog.listener.IEditQuantityClickListener;
 

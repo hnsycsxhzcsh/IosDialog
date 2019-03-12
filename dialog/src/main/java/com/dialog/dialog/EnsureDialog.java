@@ -1,10 +1,12 @@
-package com.dialog;
+package com.dialog.dialog;
 
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
+import com.dialog.BaseDialogFragment;
+import com.dialog.R;
 import com.dialog.listener.IDialogEnsureClickListener;
 
 /**

@@ -1,7 +1,10 @@
-package com.dialog;
+package com.dialog.dialog;
 
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import com.dialog.BaseDialogFragment;
+import com.dialog.R;
 
 /**
  * Created by HARRY on 2018/8/29 0029.

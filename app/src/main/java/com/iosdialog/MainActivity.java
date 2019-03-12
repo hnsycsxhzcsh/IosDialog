@@ -6,12 +6,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.dialog.EditDialog;
-import com.dialog.EditQuantityDialog;
-import com.dialog.EnsureDialog;
-import com.dialog.LoadingDialog;
-import com.dialog.SingleEnsureDialog;
+import com.dialog.dialog.AdDialog;
+import com.dialog.dialog.EditDialog;
+import com.dialog.dialog.EditQuantityDialog;
+import com.dialog.dialog.EnsureDialog;
+import com.dialog.dialog.LoadingDialog;
+import com.dialog.dialog.SingleEnsureDialog;
 import com.dialog.constant.DialogConstant;
+import com.dialog.listener.IAdDialogClickListener;
 import com.dialog.listener.IDialogEnsureClickListener;
 import com.dialog.listener.IEditQuantityClickListener;
 import com.dialog.listener.ISingleDialogEnsureClickListener;
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Button mBtLoading = findViewById(R.id.bt_loading);
         Button mBtEditQuantity = findViewById(R.id.bt_edit_quantity);
         Button mBtEdit = findViewById(R.id.bt_edit);
+
+        showAdDialog();
 
         mBtEnsure.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,5 +136,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void showAdDialog() {
+        String url = "http://d.lanrentuku.com/down/png/1311/origami_birds/bird_yellow.png";
+
+        AdDialog dialog = new AdDialog();
+        Bundle bundle = new Bundle();
+        bundle.putString("url", url);
+//        bundle.putInt("image", R.mipmap.ad);
+        dialog.setArguments(bundle);
+        dialog.show(getSupportFragmentManager(), "ensure");
+
+        dialog.setOnDialogClickListener(new IAdDialogClickListener() {
+            @Override
+            public void onPicClick() {
+                Toast.makeText(MainActivity.this, "点击了图片", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelClick() {
+                Toast.makeText(MainActivity.this, "点击了取消", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
