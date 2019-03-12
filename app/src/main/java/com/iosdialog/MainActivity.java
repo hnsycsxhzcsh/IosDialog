@@ -138,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * 显示广告dialog
+     */
     private void showAdDialog() {
         String url = "http://d.lanrentuku.com/down/png/1311/origami_birds/bird_yellow.png";
 
